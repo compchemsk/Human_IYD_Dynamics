@@ -46,3 +46,14 @@ tleap -s -f Protein-Ligand-System.in
 To run simulations, the following command can be used (if GPUs are available):
 <br>
 pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 -c Equilibration.rst7 -ref Equilibration.rst7 -r Production.rst7 -x Production.nc -inf Production.mdinfo, The parameter file for the full Substrate Bound system is provided in the "Simulation" directory.
+<br>
+<br>
+<br>
+B. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, gromacs tools, cpptraj, which are freely available for academic use.
+<br>
+chmod +x Simulation_Analysis.sh
+./Simulation_Analysis.sh
+<br>
+<br>
+<br>
+This may take few minutes based on the length of the trajectory used. This will generate all files containing root-mean-squre deviation (RMSD), root-mean-square fluctuation (RMSF), and radius of gyration (RoG) for different parts of the proteins. It is noteworthy that here dry trajectories (No water and ions) are used during analysis to reduce the analysis time. 
