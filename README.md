@@ -160,4 +160,4 @@ It will create a nice plot showing electrostatic, van der Walls, and polar solva
 <br>
 <br>
 
-E. 
+E. To identify if there is halogen bonding in the active site of the enzyme, non-covalent interaction (NCI) analysis was performed. For NCI and atom-in-molecules (AIM) analyses, the inputs are provided in Halogen_Bonding directory. Multiwfn, a tool for wave function analysis was used in this case.
