@@ -1,0 +1,16 @@
+&general
+ debug_printlevel=1, startframe=1, endframe=1000, interval=2,
+ verbose=2, keep_files=2, use_sander=0, netcdf=1,
+  receptor_mask = ":1-440,442-444",
+  ligand_mask = ":441", entropy=0,
+/
+
+&pb
+  istrng=0.15, fillratio=4.0, radiopt=0,
+  indi=4.0, exdi=80.0,
+/
+
+&decomp
+ idecomp=1, dec_verbose=2,
+ print_res="1-444", csv_format=1,
+/

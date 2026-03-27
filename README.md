@@ -107,4 +107,42 @@ To plot the free energy landscape along PC1 and PC2 use the python code "2D_plot
 <br>
 <br>
 
-D. The protein contains different ligands at different stages of the enzymatic cycle. To calculate the binding free energy of different ligands, Molecular Mechanics Poission-Boltzmann Surface Area (MM-PBSA) method was employed. The input files for MM-PBSA and corresponding codes for finding residue-wise decomposition of the free energy can be found in the Free_Energy directory.  
+D. The protein contains different ligands at different stages of the enzymatic cycle. To calculate the binding free energy of different ligands, Molecular Mechanics Poission-Boltzmann Surface Area (MM-PBSA) method was employed. The input files for MM-PBSA and corresponding codes for finding residue-wise decomposition of the free energy can be found in the Free_Energy directory. It is noteworthy that entropy corrections using quasi-harmonic approximations are not included since they are known to incorporate unwanted uncertainty in the free energy values (please refer to the above paper).  
+
+<br>
+<br>
+
+To run the MM-PBSA calculation:
+
+<br>
+MPBSA.py -O -i mmpbsa_input.in -o mmpbsa-flavin.dat -sp solvated-complex.parm7 -cp complex.parm7 -rp receptor.parm7 -lp flavin.parm7 -y Production.nc > flavin.log
+
+<br>
+
+To print the free energy values and corresponding standard deviation:
+
+<br>
+
+grep 'DELTA TOTAL' mmpbsa-flavin.dat | awk '{print$3,$4}'
+
+
+<br>
+
+Often it is mentioned that single MM-PBSA calculation does not give well-converged result. Hence, multiple replicas must be simulated and final result should be an average of all the replicas. To do this, perform many short MM-PBSA calculations stating from the minimum free energy structure. Then:
+
+<br>
+<br>
+for np in {1..10}
+<br>
+do
+<br>
+cat path_to_replica/replica-${np}/mmpbsa-FRA-${np}/mmpbsa-FRA-${np}.dat | tail -5 | head -1 >> flavin.dat
+<br>
+done
+<br>
+awk '{sum2+=$3; sum3+=$4; count++} END {print "Col2 avg:", sum2/count; print "Col3 avg:", sum3/count}' flavin.dat
+
+<br>
+<br>
+
+
