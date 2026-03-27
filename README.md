@@ -197,3 +197,45 @@ SGEPRTRAEARPWVDEDLKDSSDLHQAEEDADEWQESEENVEHIPFSHNHYPEKEMVKRSQEFYELLNKRRSVRFISNEQ
 <br>
 <br>
 
+G. To understand the proton source, at the onset of reductive dehalogentaion (the catalytic step), we performed re- vs si-face proton transfer. We use QM-cluster calculations and NBO analysis. The input files are given in the QM directory. After a successful run of the NBO-plot.com jobfile, files with .31 to .41 extensions will be generated. Now, boot Multiwfn and open the .31 file for basis information and then input .37 for NBO analysis.
+
+<br>
+<br>
+
+To restart a gaussian optimization calculation:
+<br>
+1. Way1:
+<br>
+%oldchk=reface-enzyme-env.chk
+<br>
+%chk=reface-enzyme-env-restart1.chk
+<br>
+#p opt(readopt) b3lyp/def2tzvp nosymm scf=xqc empiricaldispersion=gd3 geom=check guess=read
+
+
+<br>
+<br>
+
+2. Way2: Save last geometry and run the job from there again.
+
+<br>
+<br>
+<br>
+
+To restart a single point calculation job in gaussian:
+<br>
+%rwf=myfile.rwf
+<br>
+%nosave
+<br>
+%chk=myfile.chk
+
+<br>
+Title Card
+
+<br>
+# restart
+<br>
+rest of input
+
+Thank you. Hope this work helps you.
