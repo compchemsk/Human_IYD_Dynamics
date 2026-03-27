@@ -136,7 +136,7 @@ for np in {1..10}
 <br>
 do
 <br>
-cat path_to_replica/replica-${np}/mmpbsa-FRA-${np}/mmpbsa-FRA-${np}.dat | tail -5 | head -1 >> flavin.dat
+cat path_to_replica/replica-${np}/mmpbsa-flavin-${np}/mmpbsa-flavin-${np}.dat | tail -5 | head -1 >> flavin.dat
 <br>
 done
 <br>
