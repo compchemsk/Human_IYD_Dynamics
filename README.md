@@ -6,11 +6,8 @@ Author: Soumyajit Karmakar
 The enzymatic cycle contains 4 stages:
 
 1. Human IYD (hIYD) + FMN_hq + I-Tyr (Substrate Bound)
-<br>
 2. hIYD + FMN_ox + Tyr (Product Bound)
-<br>
 3. hIYD + FMN_ox (Apo Oxidized)
-<br> 
 4. hIYD + FMN_hq (Apo Reduced) 
 <br>
 Modelling I-Tyr will require a modified force field due to anisotropic charge distribution of halogen atoms which can help them to promote halogen bonding, with the trend: I > Br > Cl (not observable for F)
