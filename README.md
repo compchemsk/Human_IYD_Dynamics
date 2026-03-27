@@ -177,3 +177,23 @@ vmd -e RDGfill.vmd
 <br>
 vmd -e AIM.vmd
 
+
+
+<br>
+<br>
+<br>
+
+F. The NADPH-mediated flavin reduction step is one of the obscure step of the full enzymatic cycle. The full hIYD enzyme with its N-terminal membrane-bound domain, intermediate domain, and C-terminal domain was modelled using AlphaFold2. The input ColabFold python file, output pdb, docking input files, and simulation input files (where restraint was applied on the N-terminal domain) are provided in AlphaFold2-Model directory. 
+
+<br>
+
+To run the AlphaFold2.py file, upload it into google colab (https://colab.research.google.com/), then input the protein sequence and then run. For dimer, like hIYD, the sequence should be given as: 
+<br>
+<br>
+
+SGEPRTRAEARPWVDEDLKDSSDLHQAEEDADEWQESEENVEHIPFSHNHYPEKEMVKRSQEFYELLNKRRSVRFISNEQVPMEVIDNVIRTAGTAPSGAHTEPWTFVVVKDPDVKHKIRKIIEEEEEINYMKRMGHRWVTDLKKLRTNWIKEYLDTAPILILIFKQVHGFAANGKKKVHYYNEISVSIACGILLAALQNAGLVTVTTTPLNCGPRLRVLLGRPAHEKLLMLLPVGYPSKEATVPDLKRKPLDQIMVTVHHHHHH:SGEPRTRAEARPWVDEDLKDSSDLHQAEEDADEWQESEENVEHIPFSHNHYPEKEMVKRSQEFYELLNKRRSVRFISNEQVPMEVIDNVIRTAGTAPSGAHTEPWTFVVVKDPDVKHKIRKIIEEEEEINYMKRMGHRWVTDLKKLRTNWIKEYLDTAPILILIFKQVHGFAANGKKKVHYYNEISVSIACGILLAALQNAGLVTVTTTPLNCGPRLRVLLGRPAHEKLLMLLPVGYPSKEATVPDLKRKPLDQIMVTVHHHHHH
+
+<br>
+<br>
+<br>
+
