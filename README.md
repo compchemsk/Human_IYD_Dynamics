@@ -78,5 +78,16 @@ After this, eigenval.xvg and eigenvec.trr files are created which contain inform
 python PC_Contribution.py
 
 <br>
+This will generate a file 2dproj.xvg (considering only 2 PCs contribute significantly to the overall dynamics) where PC1 vs PC2 data is written. Now, we will construct a free energy landscape along PC1 vs PC2 using "2D_Boltzman.f" file. Replace the maximum and minimum values of both columns in the fortran file. Collect the data of maximum and minimum values PC1 and PC2 from the 2dproj.xvg file using the commands:
 
+awk '!/^[@#]/ {if(NR==1||$1<min1)min1=$1; if(NR==1||$1>max1)max1=$1; if(NR==1||$2<min2)min2=$2; if(NR==1||$2>max2)max2=$2} END{print "Col1 Min:",min1,"Max:",max1; print "Col2 Min:",min2,"Max:",max2}' 2dproj.xvg
+
+<br>
+gfortran 2D_Boltzman.f
+./a.out > 2dproj-fes.dat
+
+<br>
+The frame number corresponding to the structure closest to the minimum free energy basin can be obtained using the following command:
+<br>
+read x y _ < <(sort -nk3 2dproj-fes.dat | head -1); awk -v x="$x" -v y="$y" '!/^[@#]/ {i++; d=($1-x)^2+($2-y)^2; if(i==1||d<min){min=d; frame=i}} END{print frame}' 2dproj.xvg
 
