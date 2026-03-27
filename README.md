@@ -31,7 +31,8 @@ tleap -s -f Parameter-I-Tyr.in
 <br>
 <br>
 <br>
-B. The folder "Simulation" provides general input files to run classical MD simulations. The simulations include: minimization, heating, equilibration, and production run. Minimization, heating, and equilibration simulations are performed at multiple stages using position-based harmonic restraints on backbone/non-hydrogen ligand atoms/side chains, etc. At equilibration step, NVT ensemble is used while at production stage, NPT ensemble is used. Simulation temperature and pressure are kept fixed at 300~K and 1~atm. During simulation, to calculate number of univalent positive and negative ions to be added, use the script "ions-addition.pl" (a perl script), using the below command:
+B. The folder "Simulation" provides general input files to run classical MD simulations. The simulations include: minimization, heating, equilibration, and production run. Minimization, heating, and equilibration simulations are performed at multiple stages using position-based harmonic restraints on backbone/non-hydrogen ligand atoms/side chains, etc. At equilibration step, NVT ensemble is used while at production stage, NPT ensemble is used. Simulation temperature and pressure are kept fixed at 300 K and 1 atm. During simulation, to calculate number of univalent positive and negative ions to be added, use the script "ions-addition.pl" (a perl script), using the below command:
+
 <br>
 <br>  
 perl ions-addition.pl salt_concentration_in_M volume_of_simulation_box_in_A^3
