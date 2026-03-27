@@ -259,4 +259,4 @@ rest of input
 <br>
 <br>
 <br>
-Thank you. Hope this work helps you.
+Thank you. Hope this work helps you. Always cite proper references for GROMACS, ORCA, Multiwfn, and AMBER.
