@@ -144,5 +144,15 @@ awk '{sum2+=$3; sum3+=$4; count++} END {print "Col2 avg:", sum2/count; print "Co
 
 <br>
 <br>
+Now, to identify the top 10 residues which contribute significantly to the binding can be directly plotted using the residue-decomp.sh script.
+
+<br>
+<br>
+chmod +x residue-decomp.sh
+<br>
+./residue-decomp.sh
+<br>
+
+It will create a nice plot showing electrostatic, van der Walls, and polar solvation contribution of residues of protein to binding of ligand.
 
 
