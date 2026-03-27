@@ -45,7 +45,7 @@ tleap -s -f Protein-Ligand-System.in
 <br>
 To run simulations, the following command can be used (if GPUs are available):
 <br>
-pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 -c Equilibration.rst7 -ref Equilibration.rst7 -r Production.rst7 -x Production.nc -inf Production.mdinfo, The parameter file for the full Substrate Bound system is provided in the "Simulation" directory.
+pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 -c Equilibration.rst7 -ref Equilibration.rst7 -r Production.rst7 -x Production.nc -inf Production.mdinfo, the parameter file for the full Substrate Bound system is provided in the "Simulation" directory.
 <br>
 <br>
 <br>
