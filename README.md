@@ -4,7 +4,7 @@ Human IYD is a flavoprotein in the thyroid gland. Its dynamics were investigated
 Author: Soumyajit Karmakar
 <br>
 The enzymatic cycle contains 4 stages:
-<br>
+
 1. Human IYD (hIYD) + FMN_hq + I-Tyr (Substrate Bound)
 <br>
 2. hIYD + FMN_ox + Tyr (Product Bound)
