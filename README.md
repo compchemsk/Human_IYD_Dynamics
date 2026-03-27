@@ -49,7 +49,7 @@ pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 
 <br>
 <br>
 <br>
-B. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, GROMACS tools, cpptraj, which are freely available for academic use.
+C. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, GROMACS tools, cpptraj, which are freely available for academic use.
 <br>
 chmod +x Simulation_Analysis.sh
 <br>
@@ -100,3 +100,11 @@ read x y _ < <(sort -nk3 2dproj-fes.dat | head -1); awk -v x="$x" -v y="$y" '!/^
 
 
 To plot the free energy landscape along PC1 and PC2 use the python code "2D_plot.py".
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+D. The protein contains different ligands at different stages of the enzymatic cycle. To calculate the binding free energy of different ligands, Molecular Mechanics Poission-Boltzmann Surface Area (MM-PBSA) method was employed. The input files for MM-PBSA and corresponding codes for finding residue-wise decomposition of the free energy can be found in the Free_Energy directory.  
