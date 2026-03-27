@@ -49,7 +49,7 @@ pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 
 <br>
 <br>
 <br>
-B. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, gromacs tools, cpptraj, which are freely available for academic use.
+B. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, GROMACS tools, cpptraj, which are freely available for academic use.
 <br>
 chmod +x Simulation_Analysis.sh
 <br>
@@ -59,3 +59,19 @@ chmod +x Simulation_Analysis.sh
 <br>
 <br>
 This may take few minutes based on the length of the trajectory used. This will generate all files containing root-mean-squre deviation (RMSD), root-mean-square fluctuation (RMSF), and radius of gyration (RoG) for different parts of the proteins. It is noteworthy that here dry trajectories (No water and ions) are used during analysis to reduce the analysis time. 
+<br>
+<br>
+
+For studying the essential dynamics of the protein at each stage of the enzymatic cycle, principal component analysis (PCA) was performed using the GROMACS PCA tools. The basin corresponding to the minimum free energy was used to extract the structure, representing the most probable conformation of the protein at that temperature during the molecular dynamics simulation. For this purpose, the "PCA_Minimum.sh" code can be used.
+<br>
+
+During PCA analysis, first run the code "PCA_Minimum.sh" using the following lines:
+<br>
+<br>
+chmod +x PCA_Minimum.sh
+<br>
+
+./PCA_Minimum.sh
+
+After this, eigenval.xvg and eigenvec.trr files are created which contain information about eigenvalues and eigenvectors. Manually inspect, how many PCs will be required to inspect the essential dynamics of the protein and modify the "PCA_Minimum.sh" code accordingly and rerun it. 
+
