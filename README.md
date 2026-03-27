@@ -52,6 +52,8 @@ pmemd.cuda -O -i Production.in -o Production.out -p Protein-Ligand-Flavin.parm7 
 B. The folder "Analysis" contains files for analysis of MD simulation trajectories which used wordom, gromacs tools, cpptraj, which are freely available for academic use.
 <br>
 chmod +x Simulation_Analysis.sh
+<br>
+
 ./Simulation_Analysis.sh
 <br>
 <br>
