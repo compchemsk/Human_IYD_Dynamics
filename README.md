@@ -73,5 +73,10 @@ chmod +x PCA_Minimum.sh
 
 ./PCA_Minimum.sh
 
-After this, eigenval.xvg and eigenvec.trr files are created which contain information about eigenvalues and eigenvectors. Manually inspect, how many PCs will be required to inspect the essential dynamics of the protein and modify the "PCA_Minimum.sh" code accordingly and rerun it. 
+After this, eigenval.xvg and eigenvec.trr files are created which contain information about eigenvalues and eigenvectors. Manually inspect, how many PCs will be required to inspect the essential dynamics of the protein and modify the "PCA_Minimum.sh" code accordingly and rerun it. Run the python code "PC_Contribution.py" to inspect the contribution of each principal component.
+
+python PC_Contribution.py
+
+<br>
+
 
