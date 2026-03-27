@@ -153,6 +153,11 @@ chmod +x residue-decomp.sh
 ./residue-decomp.sh
 <br>
 
-It will create a nice plot showing electrostatic, van der Walls, and polar solvation contribution of residues of protein to binding of ligand.
+It will create a nice plot showing electrostatic, van der Walls, and polar solvation contribution of residues of protein to the binding of ligand.
+
+<br>
+<br>
+<br>
+<br>
 
 
