@@ -91,3 +91,5 @@ The frame number corresponding to the structure closest to the minimum free ener
 <br>
 read x y _ < <(sort -nk3 2dproj-fes.dat | head -1); awk -v x="$x" -v y="$y" '!/^[@#]/ {i++; d=($1-x)^2+($2-y)^2; if(i==1||d<min){min=d; frame=i}} END{print frame}' 2dproj.xvg
 
+<br>
+To plot the free energy landscape along PC1 and PC2 use the python code "2D_plot.py".
