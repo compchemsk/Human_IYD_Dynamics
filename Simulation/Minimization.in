@@ -1,0 +1,16 @@
+Minimize
+ &cntrl
+  imin=1,
+  ntx=1,
+  irest=0,
+  maxcyc=1000,
+  ncyc=500,
+  ntpr=100,
+  ntwx=0,
+  ntr=1,
+  ntb=1,
+  cut=10.0,
+  saltcon=0.15,
+  ioutfm=1,
+  restraintmask = ':1-444', restraint_wt = 100.0 #This restraintmask and restraint_wt will change at different stages of minimization based on systems.
+/

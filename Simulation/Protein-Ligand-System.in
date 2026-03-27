@@ -1,0 +1,24 @@
+source oldff/leaprc.ff14SB
+source leaprc.gaff
+loadamberparams frcmod.ionsjc_tip3p
+
+loadamberparams ./MIT-A.frcmod
+loadoff ./MIT-A.lib
+
+loadamberparams ./MIT-B.frcmod
+loadoff ./MIT-B.lib
+
+loadoff ./FMNH2-A.lib
+loadamberparams ./FMNH2-A.frcmod
+
+loadoff ./FMNH2-B.lib
+loadamberparams ./FMNH2-B.frcmod
+
+mol = loadpdb 4TTC-clean.pdb
+solvatebox mol TIP3PBOX 12.0
+charge mol
+addIons mol Cl- 10
+addionsrand mol Cl- 66 Na+ 66
+saveamberparm mol Substrate-Bound.parm7 Substrate-Bound.rst7
+savepdb mol Substrate-Bound-leap.pdb
+quit

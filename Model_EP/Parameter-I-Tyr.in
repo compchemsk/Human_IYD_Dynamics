@@ -1,0 +1,8 @@
+loadamberparams gaff-ep.dat
+loadamberparams I-Tyr-EP.frcmod
+MIT = loadmol2 I-Tyr-EP.mol2
+check MIT
+saveoff MIT I-Tyr-EP.lib
+saveamberparm MIT I-Tyr.parm7 I-Tyr.rst7
+savepdb MIT I-Tyr-leap.pdb
+quit
