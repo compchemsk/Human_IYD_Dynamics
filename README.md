@@ -201,6 +201,24 @@ G. To understand the proton source, at the onset of reductive dehalogentaion (th
 
 <br>
 <br>
+<br>
+
+H. The ab-initio calculations using DLPNO-CCSD(T)/DEF2-SVP were performed using ORCA for the active site of hIYD enzyme. Then Fukui function analysis was also performed using Multiwfn. The input file was provided in Ab-initio directory. For Fukui function analysis, N.wfn, N+1.wfn, and N-1.wfn files were created by addition and removal of one electron, respectively, to the original system (N electrons). 
+
+<br>
+How to create a .wfn file after calculation using ORCA?
+<br>
+orca_2mkl basename (filename without extension) -molden
+<br>
+Multiwfn basename.molden
+<br>
+100
+<br>
+select option to output wfn file.
+
+
+<br>
+<br>
 
 To restart a gaussian optimization calculation:
 <br>
